@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "br.com.yfsmsystem.grpcFortune";
+option java_outer_classname = "FortuneService";
+option java_multiple_files = true;
+
+service Fortune {
+  rpc CallFortune (FortuneRequest) returns (FortuneReply) {}
+}
+
+message FortuneRequest {
+  string name = 1;
+}
+
+message FortuneReply {
+  string message = 1;
+}
